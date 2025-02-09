@@ -21,6 +21,19 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
 body {
   font-family: "Roboto";
+}
+
+.active {
+  color: #343C6A;
 }

@@ -1,0 +1,9 @@
+.link {
+    color: #b1b1b1;
+    font-family: "Roboto Medium";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 30px;
+}

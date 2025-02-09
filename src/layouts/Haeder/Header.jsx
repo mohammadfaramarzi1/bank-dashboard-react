@@ -15,12 +15,15 @@ function Header() {
         py: "10px",
         px: "20px",
         position: "fixed",
-        left: 200,
+        left: 210,
         right: 0,
         top: 0,
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+        borderBottom: 1,
+        borderColor: "#343C6A",
+        backgroundColor: "#fff"
       }}
     >
       <Typography
@@ -32,7 +35,7 @@ function Header() {
       >
         {location.pathname === "/"
           ? "DASHBOARD"
-          : location.pathname.toUpperCase()}
+          : location.pathname.split("/")[1].toUpperCase()}
       </Typography>
       <Box component="div" sx={{ display: "flex", columnGap: 3 }}>
         <Link to="/setting" className={styles.setting}>
