@@ -3,6 +3,7 @@ import CardsInfo from "../../components/CardsInfo/CardsInfo";
 import { Box } from "@mui/material";
 import Calender from "../../components/Calender/Calender";
 import WeekCharts from "../../components/WeekCharts/WeekCharts";
+import BalanceChart from "../../components/BalanceChart/BalanceChart";
 
 function Dashboard() {
   return (
@@ -19,6 +20,7 @@ function Dashboard() {
         <Calender />
       </Box>
       <WeekCharts />
+      <BalanceChart />
     </Box>
   );
 }

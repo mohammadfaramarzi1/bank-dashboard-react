@@ -23,7 +23,8 @@ function Header() {
         alignItems: "center",
         borderBottom: 1,
         borderColor: "#343C6A",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        zIndex: 10
       }}
     >
       <Typography
