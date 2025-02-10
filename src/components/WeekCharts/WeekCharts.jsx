@@ -196,7 +196,6 @@ function WeekCharts() {
           variant="span"
           component="p"
           fontSize={20}
-          fontFamily="Roboto Medium"
           mb={2}
         >
           Weekly Activity
@@ -216,7 +215,6 @@ function WeekCharts() {
           variant="span"
           component="p"
           fontSize={20}
-          fontFamily="Roboto Medium"
           mb={2}
         >
           Expense Statistics

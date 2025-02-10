@@ -88,7 +88,7 @@ function DebitChart() {
       <Typography variant="span" component="p" fontSize={20} mb={1}>
         Debit & Credit Overview
       </Typography>
-      <div ref={chartRef} style={{ width: '100%', height: '400px', backgroundColor: "#fff", p:2, borderRadius: 10 }}></div>
+      <div ref={chartRef} style={{ width: '850px', height: '400px', backgroundColor: "#fff", p:2, borderRadius: 25 }}></div>
     </Box>
   );
 }

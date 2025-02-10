@@ -94,7 +94,6 @@ function ExpenseChart() {
       <Typography
         variant="span"
         component="p"
-        fontFamily="Roboto Medium"
         fontSize={20}
         color="#343C6A"
         mb={2}

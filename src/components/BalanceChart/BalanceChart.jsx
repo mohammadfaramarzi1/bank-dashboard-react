@@ -124,7 +124,6 @@ function BalanceChart() {
         variant="span"
         component="p"
         fontSize={20}
-        fontFamily="Roboto Medium"
         mb={2}
       >
         Balance History

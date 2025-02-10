@@ -19,7 +19,6 @@ function CardsInfo({ isCardPage }) {
         <Typography
           variant="span"
           component="span"
-          fontFamily="Roboto Medium"
           fontSize={20}
           color="#343C6A"
         >

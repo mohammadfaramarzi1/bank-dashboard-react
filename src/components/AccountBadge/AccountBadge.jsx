@@ -7,7 +7,7 @@ import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 
 function AccountBadge() {
   return (
-    <Box component="div" sx={{display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily:"Roboto Medium"}}>
+    <Box component="div" sx={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
       <Box component="div" sx={{backgroundColor: "#fff", borderRadius: 7, p: 2, width: 255, display: "flex", justifyContent: "center", alignItems: "center", columnGap: 2}}>
         <Box component="div" sx={{backgroundColor: "#FFF5D9", width: 70, height: 70, borderRadius: "100%", display: "flex", alignItems: "center", justifyContent: "center"}}>
           <AccountBalanceIcon sx={{fontSize: "30px", color: "#FFBB38"}} />
