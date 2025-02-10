@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import styles from "./CardsInfo.module.css";
 
-function CardsInfo() {
+function CardsInfo({ isCardPage }) {
   return (
     <Box component="div" color="#fff">
       <Box
@@ -25,12 +25,21 @@ function CardsInfo() {
         >
           My Cards
         </Typography>
-        <Link
-          to="/cards"
-          style={{ fontFamily: "Roboto Medium", color: "#343C6A" }}
-        >
-          See All
-        </Link>
+        {isCardPage ? (
+          <Button
+            variant="outlined"
+            sx={{ color: "#343C6A", borderColor: "#343C6A" }}
+          >
+            +Add Card
+          </Button>
+        ) : (
+          <Link
+            to="/cards"
+            style={{ fontFamily: "Roboto Medium", color: "#343C6A" }}
+          >
+            See All
+          </Link>
+        )}
       </Box>
       <Box component="div" sx={{ display: "flex", columnGap: 2 }}>
         <Box component="div" className={styles.card__blue}>
@@ -106,10 +115,7 @@ function CardsInfo() {
             <img src="/Group 17-min.png" alt="" />
           </Box>
         </Box>
-        <Box
-          component="div"
-          className={styles.card__white}
-        >
+        <Box component="div" className={styles.card__white}>
           <Box
             component="div"
             sx={{

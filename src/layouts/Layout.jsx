@@ -8,7 +8,7 @@ function Layout({ children }) {
     <>
       <Header />
       <Sidebar />
-      <Box component="div" sx={{ marginTop: 9, marginLeft: 26, backgroundColor: "#f6f6f6", pl: 3, pt: 3 }}>
+      <Box component="div" sx={{ marginTop: 9, marginLeft: 26, backgroundColor: "#f6f6f6", pl: 3, py: 3 }}>
         {children}
       </Box>
     </>

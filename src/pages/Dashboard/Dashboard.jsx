@@ -12,11 +12,10 @@ function Dashboard() {
         component="div"
         sx={{
           display: "flex",
-          alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        <CardsInfo />
+        <CardsInfo isCardPage={false} />
         <Calender />
       </Box>
       <WeekCharts />
