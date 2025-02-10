@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import CardsInfo from "../../components/CardsInfo/CardsInfo";
 import ExpenseChart from "../../components/ExpenseChart/ExpenseChart";
+import RecentTransactions from "../../components/RecentTransactions/RecentTransactions";
 
 function Transactions() {
 
@@ -19,6 +20,7 @@ function Transactions() {
         <CardsInfo isCardPage={true} />
         <ExpenseChart />
       </Box>
+      <RecentTransactions />
     </Box>
   );
 }

@@ -31,9 +31,6 @@ function ExpenseChart() {
       legend: {},
       toolbox: {
         show: true,
-        feature: {
-          saveAsImage: {},
-        },
       },
       dataZoom: { show: false, start: 0, end: 100 },
       xAxis: [
@@ -107,7 +104,7 @@ function ExpenseChart() {
       <div
         ref={chartRef}
         style={{
-          width: "550px",
+          width: "540px",
           height: "380px",
           backgroundColor: "#fff",
           borderRadius: 25,
