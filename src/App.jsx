@@ -1,11 +1,14 @@
-import Header from "./layouts/Haeder/Header";
-import Sidebar from "./layouts/Sidebar/Sidebar";
+import Layout from "./layouts/Layout";
+import Router from "./Router";
 
 function App() {
-  return <>
-    <Header />
-    <Sidebar />
-  </>;
+  return (
+    <>
+      <Layout>
+        <Router />
+      </Layout>
+    </>
+  );
 }
 
 export default App;

@@ -1,0 +1,26 @@
+.card__blue,
+.card__white {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 12px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  width: 350px;
+  height: 235px;
+}
+
+.card__blue {
+  background: linear-gradient(
+    to right,
+    rgba(76, 73, 237, 1),
+    rgba(10, 6, 244, 1)
+  );
+}
+
+.card__white {
+  background-color: #a0a0a0;
+}

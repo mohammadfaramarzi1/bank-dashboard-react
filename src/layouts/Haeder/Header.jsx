@@ -29,7 +29,6 @@ function Header() {
       <Typography
         variant="h5"
         component="h3"
-        color="#343C6A"
         fontFamily="Roboto SemiBold"
         fontSize="25px"
       >

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import CardsInfo from "../../components/CardsInfo/CardsInfo";
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <>
+      <CardsInfo />
+    </>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
