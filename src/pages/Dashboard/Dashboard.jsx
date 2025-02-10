@@ -2,6 +2,7 @@ import React from "react";
 import CardsInfo from "../../components/CardsInfo/CardsInfo";
 import { Box } from "@mui/material";
 import Calender from "../../components/Calender/Calender";
+import WeekCharts from "../../components/WeekCharts/WeekCharts";
 
 function Dashboard() {
   return (
@@ -17,6 +18,7 @@ function Dashboard() {
         <CardsInfo />
         <Calender />
       </Box>
+      <WeekCharts />
     </Box>
   );
 }
