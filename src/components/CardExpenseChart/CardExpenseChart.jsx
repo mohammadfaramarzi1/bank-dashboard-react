@@ -45,7 +45,7 @@ function CardExpenseChart() {
     }
   }, []);
   return (
-    <Box component="div" mt={5}>
+    <Box component="div">
       <Typography variant="span" component="p" mb={1} fontSize={20}>
         Card Expense Statistics
       </Typography>
