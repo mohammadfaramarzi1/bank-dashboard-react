@@ -76,8 +76,10 @@ function DebitChart() {
           },
           data: [23.0, 15.9, 19.0, 75.0, 28.7, 70.7, 175.6],
         },
-        
       ],
+      textStyle: {
+        fontFamily: "Roboto Medium, sans-serif",
+      },
     };
 
     myChart.setOption(option);
@@ -88,7 +90,16 @@ function DebitChart() {
       <Typography variant="span" component="p" fontSize={20} mb={1}>
         Debit & Credit Overview
       </Typography>
-      <div ref={chartRef} style={{ width: '850px', height: '400px', backgroundColor: "#fff", p:2, borderRadius: 25 }}></div>
+      <div
+        ref={chartRef}
+        style={{
+          width: "850px",
+          height: "400px",
+          backgroundColor: "#fff",
+          p: 2,
+          borderRadius: 25,
+        }}
+      ></div>
     </Box>
   );
 }

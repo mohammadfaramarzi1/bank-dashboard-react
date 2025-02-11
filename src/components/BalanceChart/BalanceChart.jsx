@@ -112,6 +112,9 @@ function BalanceChart() {
           data: [220, 402, 231, 134, 190, 230, 120],
         },
       ],
+      textStyle: {
+        fontFamily: "Roboto Medium, sans-serif",
+      },
     };
 
     myChart.setOption(option);

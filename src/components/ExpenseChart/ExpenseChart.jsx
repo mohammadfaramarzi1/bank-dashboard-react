@@ -65,6 +65,9 @@ function ExpenseChart() {
         },
         { name: "Last Year", type: "line", data: data2 },
       ],
+      textStyle: {
+        fontFamily: "Roboto Medium, sans-serif",
+      },
     };
 
     myChart.setOption(option);
