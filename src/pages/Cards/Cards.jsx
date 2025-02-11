@@ -4,6 +4,7 @@ import CardsInfo from "../../components/CardsInfo/CardsInfo";
 import CardExpenseChart from "../../components/CardExpenseChart/CardExpenseChart";
 import CardList from "../../components/CardList/CardList";
 import AddCard from "../../components/AddCard/AddCard";
+import CardSetting from "../../components/CardSetting/CardSetting";
 
 function Cards() {
   return (
@@ -13,8 +14,9 @@ function Cards() {
         <CardExpenseChart />
         <CardList />
       </Box>
-      <Box component="div" mt={5}>
+      <Box component="div" sx={{mt: 5, display: "flex", columnGap: 3}}>
         <AddCard />
+        <CardSetting />
       </Box>
     </Box>
   );
