@@ -40,7 +40,7 @@ function YearChart() {
       <Typography variant="span" component="p" fontSize={20} mb={1}>
         Yearly Total Investment
       </Typography>
-      <div ref={chartRef} style={{ width: "600px", height: "400px", backgroundColor: "#fff", borderRadius: 15 }} />
+      <div ref={chartRef} style={{ width: "100%", height: "400px", backgroundColor: "#fff", borderRadius: 15 }} />
     </Box>
   );
 }
