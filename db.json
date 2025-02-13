@@ -53,42 +53,48 @@
         "desc": "Spotify Subscription",
         "type": "Shopping",
         "date": "28 jun, 10:30",
-        "amount": "-$2,500"
+        "amount": "-$2,500",
+        "status": "Pending"
       },
       {
         "Tid": "651465641",
         "desc": "Freepik Sales",
         "type": "Transfer",
         "date": "27 jun, 11:30",
-        "amount": "+$750"
+        "amount": "+$750",
+        "status": "Pending"
       },
       {
         "Tid": "5648545",
         "desc": "Mobile Service",
         "type": "Service",
         "date": "27 aug, 7:30",
-        "amount": "-$150"
+        "amount": "-$150",
+        "status": "Completed"
       },
       {
         "Tid": "14464565",
         "desc": "Wilson",
         "type": "Transfer",
         "date": "25 oct, 17:30",
-        "amount": "-$1050"
+        "amount": "-$1050",
+        "status": "Pending"
       },
       {
         "Tid": "456595644",
         "desc": "Emilly",
         "type": "Transfer",
         "date": "2 nov, 22:30",
-        "amount": "+$840"
+        "amount": "+$840",
+        "status": "Pending"
       },
       {
         "Tid": "5659656265",
         "desc": "Elisa",
         "type": "Transfer",
         "date": "25 jun, 13:30",
-        "amount": "+$658"
+        "amount": "+$658",
+        "status": "Pending"
       }
     ]
   }
