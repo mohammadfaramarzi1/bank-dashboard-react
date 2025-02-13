@@ -20,7 +20,7 @@ function CardsInfo({ isCardPage }) {
   }, [])
 
   return (
-    <Box component="div" color="#fff" width={730}>
+    <Box component="div" color="#fff" width={720}>
       <Box
         component="div"
         sx={{

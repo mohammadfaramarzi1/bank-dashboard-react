@@ -1,50 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
 import * as echarts from "echarts";
-
-const series = [
-  {
-    data: [120, 200, 150, 80, 70, 110, 130],
-    type: "bar",
-    stack: "a",
-    name: "a",
-  },
-  {
-    data: [10, 46, 64, "-", 0, "-", 0],
-    type: "bar",
-    stack: "a",
-    name: "b",
-  },
-  {
-    data: [30, "-", 0, 20, 10, "-", 0],
-    type: "bar",
-    stack: "a",
-    name: "c",
-  },
-  {
-    data: [30, "-", 0, 20, 10, "-", 0],
-    type: "bar",
-    stack: "b",
-    name: "d",
-  },
-  {
-    data: [10, 20, 150, 0, "-", 50, 10],
-    type: "bar",
-    stack: "b",
-    name: "e",
-  },
-];
-
-const option = {
-  xAxis: {
-    type: "category",
-    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  },
-  yAxis: {
-    type: "value",
-  },
-  series: series,
-};
+import { series, option } from "../../Charts/Week";
 
 function WeekCharts() {
   const firstChartRef = useRef(null);
@@ -53,38 +10,7 @@ function WeekCharts() {
     if (!firstChartRef.current) return;
     const myChart = echarts.init(firstChartRef.current);
 
-    let series = [
-      {
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: "bar",
-        stack: "a",
-        name: "a",
-      },
-      {
-        data: [10, 46, 64, "-", 0, "-", 0],
-        type: "bar",
-        stack: "a",
-        name: "b",
-      },
-      {
-        data: [30, "-", 0, 20, 10, "-", 0],
-        type: "bar",
-        stack: "a",
-        name: "c",
-      },
-      {
-        data: [30, "-", 0, 20, 10, "-", 0],
-        type: "bar",
-        stack: "b",
-        name: "d",
-      },
-      {
-        data: [10, 20, 150, 0, "-", 50, 10],
-        type: "bar",
-        stack: "b",
-        name: "e",
-      },
-    ];
+    
 
     const stackInfo = {};
     for (let i = 0; i < series[0].data.length; ++i) {
@@ -192,12 +118,7 @@ function WeekCharts() {
       sx={{ mt: 5, display: "flex", justifyContent: "space-between" }}
     >
       <Box component="div">
-        <Typography
-          variant="span"
-          component="p"
-          fontSize={20}
-          mb={2}
-        >
+        <Typography variant="span" component="p" fontSize={20} mb={2}>
           Weekly Activity
         </Typography>
         <div
@@ -211,12 +132,7 @@ function WeekCharts() {
         ></div>
       </Box>
       <Box component="div">
-        <Typography
-          variant="span"
-          component="p"
-          fontSize={20}
-          mb={2}
-        >
+        <Typography variant="span" component="p" fontSize={20} mb={2}>
           Expense Statistics
         </Typography>
         <div
