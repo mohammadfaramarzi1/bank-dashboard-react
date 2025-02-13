@@ -3,7 +3,11 @@
     "name": "Mohammad Faramarzi",
     "username": "Faramarzi@ff",
     "email": "faramarzi.dev@gmail.com",
-    "password": "ff1123456"
+    "password": "ff1123456",
+    "balance": 96499,
+    "income": 9645645,
+    "expense": 2569596,
+    "total_saving": 969652
   },
   "investment": {
     "total-amount": 100000,
@@ -19,9 +23,6 @@
       "number": "3798 9457 8965 4127",
       "naming": "Mohammad Faramarzi",
       "type": "Secondary",
-      "income": 6578,
-      "expense": 9654,
-      "saving": 9645966,
       "bank": "DBL Bank"
     },
     {
@@ -32,9 +33,6 @@
       "number": "3789 4569 8144 8596",
       "naming": "Mohammad Faramarzi",
       "type": "Secondary",
-      "income": 659652,
-      "expense": 459654,
-      "saving": 64596546,
       "bank": "BRC Bank"
     },
     {
@@ -45,9 +43,6 @@
       "number": "3789 6554 4417 8952",
       "naming": "Mohammad Faramarzi",
       "type": "Secondary",
-      "income": 94652,
-      "expense": 9645,
-      "saving": 6459564,
       "bank": "ADM Bank"
     }
   ],
