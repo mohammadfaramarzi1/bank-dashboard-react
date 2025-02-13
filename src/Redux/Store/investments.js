@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getInvestmentInfosFromServer = createAsyncThunk(
-  "card/getInvestmentInfosFromServer",
+  "investment/getInvestmentInfosFromServer",
   async () => {
     return fetch("http://localhost:3000/investment")
       .then((res) => res.json())

@@ -1,9 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import bankReducer from "./Store/card";
+import cardReducer from "./Store/card";
+import investmentsReducer from "./Store/investments";
+import transactionsReducer from "./Store/transactions";
+import userReducer from "./Store/user";
 
 const store = configureStore({
   reducer: {
-    bank: bankReducer,
+    card: cardReducer,
+    investments: investmentsReducer,
+    transactions: transactionsReducer,
+    user: userReducer,
   },
 });
 

@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const getYransactionsInfosFromServer = createAsyncThunk(
+export const getTransactionsInfosFromServer = createAsyncThunk(
   "transactions/getTransactionsInfosFromServer",
   async () => {
     return fetch("http://localhost:3000/transactions")
@@ -15,7 +15,7 @@ const slice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(
-      getYransactionsInfosFromServer.fulfilled,
+      getTransactionsInfosFromServer.fulfilled,
       (state, action) => {
         state.push(action.payload);
       }
