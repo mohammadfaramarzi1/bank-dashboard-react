@@ -87,6 +87,13 @@
         "type": "Transfer",
         "date": "2 nov, 22:30",
         "amount": "+$840"
+      },
+      {
+        "Tid": "5659656265",
+        "desc": "Elisa",
+        "type": "Transfer",
+        "date": "25 jun, 13:30",
+        "amount": "+$658"
       }
     ]
   }

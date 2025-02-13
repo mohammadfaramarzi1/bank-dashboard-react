@@ -13,7 +13,6 @@ function CardsInfo({ isCardPage }) {
 
   const card = useSelector(state => state.card);
   const dispatch = useDispatch()
-  console.log(card)
 
   useEffect(() => {
     dispatch(getCardInfosFromServer())

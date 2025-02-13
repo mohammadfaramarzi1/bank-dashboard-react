@@ -9,9 +9,6 @@ function WeekCharts() {
   useEffect(() => {
     if (!firstChartRef.current) return;
     const myChart = echarts.init(firstChartRef.current);
-
-    
-
     const stackInfo = {};
     for (let i = 0; i < series[0].data.length; ++i) {
       for (let j = 0; j < series.length; ++j) {

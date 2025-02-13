@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -18,6 +18,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { useDispatch, useSelector } from "react-redux";
+import { getTransactionsInfosFromServer } from "../../Redux/Store/transactions";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,162 +50,166 @@ function a11yProps(index) {
   };
 }
 
-function createData(desc, Tid, type, card, date, amount) {
-  return { desc, Tid, type, card, date, amount };
+function createData(desc, Tid, type, date, amount) {
+  return { desc, Tid, type, date, amount };
 }
 
-const rows = [
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-  createData(
-    "Spotify Subscription",
-    "#12548796",
-    "Shopping",
-    "1234 ****",
-    "28 Jan, 12.30 AM",
-    " -2,500"
-  ),
-];
+// const rows = [
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+//   createData(
+//     "Spotify Subscription",
+//     "#12548796",
+//     "Shopping",
+//     "1234 ****",
+//     "28 Jan, 12.30 AM",
+//     " -2,500"
+//   ),
+// ];
 
 function RecentTransactions() {
   const [value, setValue] = React.useState(0);
+  const [rows, setRows] = useState([]);
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const transactions = useSelector((state) => state.transactions[0]?.all);
+  const dispatch = useDispatch();
+  console.log(rows);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -217,6 +223,22 @@ function RecentTransactions() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    dispatch(getTransactionsInfosFromServer());
+    transactions?.forEach((transaction) => {
+      setRows((rows) => [
+        ...rows,
+        createData(
+          transaction.desc,
+          transaction.Tid,
+          transaction.type,
+          transaction.date,
+          transaction.amount
+        ),
+      ]);
+    });
+  }, []);
 
   return (
     <Box component="div" mt={5}>
@@ -262,7 +284,6 @@ function RecentTransactions() {
                   <TableCell>Description</TableCell>
                   <TableCell align="center">Transaction ID</TableCell>
                   <TableCell align="center">Type</TableCell>
-                  <TableCell align="center">Card</TableCell>
                   <TableCell align="center">Date</TableCell>
                   <TableCell align="center">Amount</TableCell>
                   <TableCell align="center">Actions</TableCell>
@@ -281,9 +302,8 @@ function RecentTransactions() {
                       </TableCell>
                       <TableCell align="center">{row.Tid}</TableCell>
                       <TableCell align="center">{row.type}</TableCell>
-                      <TableCell align="center">{row.card}</TableCell>
                       <TableCell align="center">{row.date}</TableCell>
-                      <TableCell align="center">{row.amount}</TableCell>
+                      <TableCell align="center" sx={row.amount.startsWith("+") ? {color: "#41D4A8"} : {color: "#FF4B4A"}}>{row.amount}</TableCell>
                       <TableCell align="center">
                         <IconButton color="error">
                           <DeleteIcon />
@@ -315,14 +335,13 @@ function RecentTransactions() {
                   <TableCell>Description</TableCell>
                   <TableCell align="center">Transaction ID</TableCell>
                   <TableCell align="center">Type</TableCell>
-                  <TableCell align="center">Card</TableCell>
                   <TableCell align="center">Date</TableCell>
                   <TableCell align="center">Amount</TableCell>
                   <TableCell align="center">Actions</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row, index) => (
+                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).sort((a, b) => b.Tid - a.Tid).map((row, index) => (
                   <TableRow
                     key={index}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -332,9 +351,8 @@ function RecentTransactions() {
                     </TableCell>
                     <TableCell align="center">{row.Tid}</TableCell>
                     <TableCell align="center">{row.type}</TableCell>
-                    <TableCell align="center">{row.card}</TableCell>
                     <TableCell align="center">{row.date}</TableCell>
-                    <TableCell align="center">{row.amount}</TableCell>
+                    <TableCell align="center" sx={row.amount.startsWith("+") ? {color: "#41D4A8"} : {color: "#FF4B4A"}}>{row.amount}</TableCell>
                     <TableCell align="center">
                       <IconButton color="error">
                         <DeleteIcon />
