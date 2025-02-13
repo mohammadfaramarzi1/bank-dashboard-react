@@ -6,6 +6,9 @@ import WeekCharts from "../../components/WeekCharts/WeekCharts";
 import BalanceChart from "../../components/BalanceChart/BalanceChart";
 
 function Dashboard() {
+
+
+  
   return (
     <Box component="div" sx={{ mr: 2 }}>
       <Box
