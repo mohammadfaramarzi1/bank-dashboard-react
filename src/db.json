@@ -1,0 +1,93 @@
+{
+  "user": {
+    "name": "Mohammad Faramarzi",
+    "username": "Faramarzi@ff",
+    "email": "faramarzi.dev@gmail.com",
+    "password": "ff1123456"
+  },
+  "investment": {
+    "total-amount": 100000,
+    "number": 1200,
+    "rate": 5.8
+  },
+  "cards": [
+    {
+      "id": 1,
+      "balance": 5789,
+      "card-holder": "Mohammad Faramarzi",
+      "valid-thru": "12/12",
+      "number": "3798945789654127",
+      "naming": "Mohammad Faramarzi",
+      "type": "Secondary",
+      "income": 6578,
+      "expense": 9654,
+      "saving": 9645966,
+      "bank": "DBL Bank"
+    },
+    {
+      "id": 2,
+      "balance": 5854,
+      "card-holder": "Mohammad Faramarzi",
+      "valid-thru": "1/5",
+      "number": "37894569814478596",
+      "naming": "Mohammad Faramarzi",
+      "type": "Secondary",
+      "income": 659652,
+      "expense": 459654,
+      "saving": 64596546,
+      "bank": "BRC Bank"
+    },
+    {
+      "id": 3,
+      "balance": 146541,
+      "card-holder": "Mohammad Faramarzi",
+      "valid-thru": "11/2",
+      "number": "3789655444178952",
+      "naming": "Mohammad Faramarzi",
+      "type": "Secondary",
+      "income": 94652,
+      "expense": 9645,
+      "saving": 6459564,
+      "bank": "ADM Bank"
+    }
+  ],
+  "transactions": {
+    "all": [
+      {
+        "Tid": "96565985",
+        "desc": "Spotify Subscription",
+        "type": "Shopping",
+        "date": "28 jun, 10:30",
+        "amount": "-$2,500"
+      },
+      {
+        "Tid": "651465641",
+        "desc": "Freepik Sales",
+        "type": "Transfer",
+        "date": "27 jun, 11:30",
+        "amount": "+$750"
+      },
+      {
+        "Tid": "5648545",
+        "desc": "Mobile Service",
+        "type": "Service",
+        "date": "27 aug, 7:30",
+        "amount": "-$150"
+      },
+      {
+        "Tid": "14464565",
+        "desc": "Wilson",
+        "type": "Transfer",
+        "date": "25 oct, 17:30",
+        "amount": "-$1050"
+      },
+      {
+        "Tid": "456595644",
+        "desc": "Emilly",
+        "type": "Transfer",
+        "date": "2 nov, 22:30",
+        "amount": "+$840"
+      }
+    ]
+  }
+}
