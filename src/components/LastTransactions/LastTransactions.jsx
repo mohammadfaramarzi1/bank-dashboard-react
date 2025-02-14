@@ -32,6 +32,7 @@ function LastTransactions() {
       >
         {transactions?.slice(0, 3).map((transaction) => (
           <Box
+          key={transaction.Tid}
             component="div"
             sx={{
               display: "flex",
