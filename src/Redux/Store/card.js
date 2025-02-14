@@ -15,7 +15,7 @@ const slice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getCardInfosFromServer.fulfilled, (state, action) => {
-      state.push(action.payload);
+       state.push(action.payload);
     });
   },
 });
