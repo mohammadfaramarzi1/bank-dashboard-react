@@ -9,7 +9,6 @@ import { getInvestmentInfosFromServer } from "../../Redux/Store/investments";
 function InvestmentBadge() {
   const investment = useSelector((state) => state.investments[0]);
   const dispatch = useDispatch();
-  console.log(investment);
 
   useEffect(() => {
     dispatch(getInvestmentInfosFromServer());
@@ -57,7 +56,7 @@ function InvestmentBadge() {
             Total Invested Amount
           </Typography>
           <Typography variant="span" component="p">
-            ${investment.total_amount.toLocaleString()}
+            ${investment?.total_amount.toLocaleString()}
           </Typography>
         </Box>
       </Box>
@@ -93,7 +92,7 @@ function InvestmentBadge() {
             Number of Investments
           </Typography>
           <Typography variant="span" component="p">
-            {investment.number.toLocaleString()}
+            {investment?.number.toLocaleString()}
           </Typography>
         </Box>
       </Box>
@@ -129,7 +128,7 @@ function InvestmentBadge() {
             Rate of Return
           </Typography>
           <Typography variant="span" component="p">
-            +{investment.rate}%
+            +{investment?.rate}%
           </Typography>
         </Box>
       </Box>
