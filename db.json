@@ -1,13 +1,10 @@
 {
   "user": {
-    "name": "Mohammad Faramarzi",
-    "username": "Faramarzi@ff",
-    "email": "faramarzi.dev@gmail.com",
-    "password": "ff1123456",
     "balance": 96499,
     "income": 9645645,
     "expense": 2569596,
-    "total_saving": 969652
+    "total_saving": 969652,
+    "img": ""
   },
   "investment": {
     "total_amount": 100000,
