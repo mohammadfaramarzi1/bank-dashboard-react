@@ -12,15 +12,20 @@ export const getTransactionsInfosFromServer = createAsyncThunk(
 const slice = createSlice({
   name: "transactions",
   initialState: [],
-  reducers: {},
+  reducers: {
+    addNewTransaction: (state, action) => {
+      return [...state, action.payload];
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(
       getTransactionsInfosFromServer.fulfilled,
       (state, action) => {
-        state.push(action.payload);
+        return [...state, action.payload];
       }
     );
   },
 });
 
 export default slice.reducer;
+export const { addNewTransaction } = slice.actions;

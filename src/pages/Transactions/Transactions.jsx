@@ -17,7 +17,7 @@ function Transactions() {
           justifyContent: "space-between",
         }}
       >
-        <CardsInfo isCardPage={true} />
+        <CardsInfo isCardPage={false} />
         <ExpenseChart />
       </Box>
       <RecentTransactions />
